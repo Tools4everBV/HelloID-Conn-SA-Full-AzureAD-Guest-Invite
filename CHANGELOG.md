@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.0.1] - 2026-06-01
+
+### Fixed
+
+- Removed example values from global variables in all-in-one setup script (`createform.ps1`)
+  - Cleared example GUID values for `EntraIDAppId` and `EntraIDtenantID` variables
+  - Removed example placeholder value for `companyName` variable
+
 ## [2.0.0] - 2026-06-01
 
 This is a major release that migrates from Azure AD to Microsoft Entra ID terminology and replaces client secret authentication with certificate-based authentication. This release includes breaking changes that require reconfiguration of global variables and App Registration settings.
