@@ -27,27 +27,14 @@ $globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue
 $tmpName = @'
 EntraIDAppId
 '@ 
-$tmpValue = @'
-cb1b4227-62c7-40a9-8984-9c19c989df2f
-'@ 
+$tmpValue = "" 
 $globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue; secret = "False"});
 
 #Global variable #3 >> EntraIDtenantID
 $tmpName = @'
 EntraIDtenantID
 '@ 
-$tmpValue = @'
-6b5db95a-9873-426a-90d8-b84baa033a05
-'@ 
-$globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue; secret = "False"});
-
-#Global variable #4 >> companyName
-$tmpName = @'
-companyName
-'@ 
-$tmpValue = @'
-{{company.name}}
-'@ 
+$tmpValue = "" 
 $globalHelloIDVariables.Add([PSCustomObject]@{name = $tmpName; value = $tmpValue; secret = "False"});
 
 #Global variable #5 >> EntraIdCertificatePassword
