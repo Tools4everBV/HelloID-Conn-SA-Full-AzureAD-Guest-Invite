@@ -1,0 +1,10 @@
+[
+    {
+        "description":  "Email",
+        "translateDescription":  false,
+        "inputFieldType":  1,
+        "key":  "Email",
+        "type":  0,
+        "options":  1
+    }
+]

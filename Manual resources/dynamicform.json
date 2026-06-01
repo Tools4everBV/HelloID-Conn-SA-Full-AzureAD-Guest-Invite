@@ -1,84 +1,128 @@
 [
-  {
-    "key": "email",
-    "templateOptions": {
-      "label": "Email",
-      "placeholder": "user@domain.com",
-      "required": true
+    {
+        "key":  "email",
+        "templateOptions":  {
+                                "label":  "Email",
+                                "placeholder":  "user@domain.com",
+                                "required":  true
+                            },
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  false
     },
-    "type": "input",
-    "summaryVisibility": "Show",
-    "requiresTemplateOptions": true,
-    "requiresKey": true,
-    "requiresDataSource": false
-  },
-  {
-    "key": "givenname",
-    "templateOptions": {
-      "label": "Givenname",
-      "placeholder": "John",
-      "required": true,
-      "minLength": 2
+    {
+        "key":  "mailValidation",
+        "templateOptions":  {
+                                "label":  "Email validation",
+                                "pattern":  "^Valid.*",
+                                "required":  true,
+                                "readonly":  true,
+                                "placeholder":  "Email will be validated on uniqnueness in Entra ID",
+                                "useDataSource":  true,
+                                "dataSourceConfig":  {
+                                                         "dataSourceGuid":  "$dataSourceGuid_0",
+                                                         "input":  {
+                                                                       "propertyInputs":  [
+                                                                                              {
+                                                                                                  "propertyName":  "Email",
+                                                                                                  "otherFieldValue":  {
+                                                                                                                          "otherFieldKey":  "email"
+                                                                                                                      }
+                                                                                              }
+                                                                                          ]
+                                                                   }
+                                                     },
+                                "displayField":  "output"
+                            },
+        "hideExpression":  "!model[\"email\"]",
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  false
     },
-    "type": "input",
-    "summaryVisibility": "Show",
-    "requiresTemplateOptions": true,
-    "requiresKey": true,
-    "requiresDataSource": false
-  },
-  {
-    "key": "lastname",
-    "templateOptions": {
-      "label": "Last name",
-      "placeholder": "Poel",
-      "required": true,
-      "minLength": 2
+    {
+        "key":  "givenname",
+        "templateOptions":  {
+                                "label":  "Givenname",
+                                "placeholder":  "John",
+                                "required":  true,
+                                "minLength":  2
+                            },
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  false
     },
-    "type": "input",
-    "summaryVisibility": "Show",
-    "requiresTemplateOptions": true,
-    "requiresKey": true,
-    "requiresDataSource": false
-  },
-  {
-    "key": "messageArea",
-    "templateOptions": {
-      "label": "Personal Message",
-      "rows": 3
+    {
+        "key":  "lastname",
+        "templateOptions":  {
+                                "label":  "Last name",
+                                "placeholder":  "Poel",
+                                "required":  true,
+                                "minLength":  2
+                            },
+        "type":  "input",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  false
     },
-    "className": "textarea-resize-vert",
-    "type": "textarea",
-    "summaryVisibility": "Show",
-    "requiresTemplateOptions": true,
-    "requiresKey": true,
-    "requiresDataSource": false
-  },
-  {
-    "key": "groups",
-    "templateOptions": {
-      "label": "Groups",
-      "useObjects": false,
-      "useFilter": true,
-      "options": [
-        "Option 1",
-        "Option 2",
-        "Option 3"
-      ],
-      "useDataSource": true,
-      "dataSourceConfig": {
-        "dataSourceGuid": "$dataSourceGuid_0",
-        "input": {
-          "propertyInputs": []
-        }
-      },
-      "valueField": "name",
-      "textField": "name"
+    {
+        "key":  "messageArea",
+        "templateOptions":  {
+                                "label":  "Personal Message",
+                                "rows":  3
+                            },
+        "className":  "textarea-resize-vert",
+        "type":  "textarea",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  false
     },
-    "type": "multiselect",
-    "summaryVisibility": "Show",
-    "textOrLabel": "text",
-    "requiresTemplateOptions": true,
-    "requiresKey": true,
-    "requiresDataSource": false
-  }
+    {
+        "key":  "groups",
+        "templateOptions":  {
+                                "label":  "Groups",
+                                "required":  false,
+                                "grid":  {
+                                             "columns":  [
+                                                             {
+                                                                 "headerName":  "Display Name",
+                                                                 "field":  "displayName"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Description",
+                                                                 "field":  "description"
+                                                             },
+                                                             {
+                                                                 "headerName":  "Id",
+                                                                 "field":  "id"
+                                                             }
+                                                         ],
+                                             "height":  300,
+                                             "rowSelection":  "multiple"
+                                         },
+                                "dataSourceConfig":  {
+                                                         "dataSourceGuid":  "$dataSourceGuid_1",
+                                                         "input":  {
+                                                                       "propertyInputs":  [
+
+                                                                                          ]
+                                                                   }
+                                                     },
+                                "useFilter":  true,
+                                "useDefault":  false,
+                                "allowCsvDownload":  false
+                            },
+        "type":  "multiselectgrid",
+        "summaryVisibility":  "Show",
+        "requiresTemplateOptions":  true,
+        "requiresKey":  true,
+        "requiresDataSource":  true
+    }
 ]
